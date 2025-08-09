@@ -2,15 +2,15 @@ import React from 'react'
 
 const ProductCard = ({product, onDelete, onEdit}) => {
   return (
-    <div className="bg-white shadow-md rounded-xl overflow-hidden w-full sm:w-64 transform transition-transform duration-300 hover:-translate-y-3">
+    <div className="bg-slate-800 shadow-md rounded-xl overflow-hidden w-64 sm:w-64 outline-1 outline-slate-700 transform transition-transform duration-300 hover:-translate-y-3">
         <img
         src={product.image}
         alt={product.name}
         className="w-full h-40 object-cover"
         />
         <div className="p-4 space-y-2">
-        <h2 className="text-lg font-semibold text-gray-800">{product.name}</h2>
-        <p className="text-gray-600">₱{product.price}</p>
+        <h2 className="text-lg font-semibold text-white">{product.name}</h2>
+        <p className="text-slate-300">₱{product.price}</p>
 
         <div className="flex justify-between mt-4">
           <button

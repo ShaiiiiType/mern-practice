@@ -3,6 +3,7 @@ import { connectDB } from './config/db.js';
 import dotenv from "dotenv";
 
 import productRouter from './route/product.route.js';
+import authRouter from './route/auth.route.js';
 
 dotenv.config();
 
@@ -14,14 +15,9 @@ app.get("/",(req, res) => {
     res.send("Yahoo! its working");
 })
 
-app.get("/test",(req, res) => {
-    res.send("Yahoo! its test working");
-})
-
-
-// For products 
 app.use("/api/products", productRouter);
-//
+app.use("/api/auth", authRouter);
+
 app.listen(5000, () => {
     connectDB();
     console.log("Server started at http://localhost:5000"); 
